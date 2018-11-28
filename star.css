@@ -12,26 +12,54 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    
     
 }
 
-figure {
-    border: thin #343434 solid;
+
+.card {
     display: flex;
-    flex-direction: column;
-    margin: 5px;
-    /* padding: 3px; */
-    box-shadow: 3px -3px 3px #373737;
-    transition: 1s;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*transform: rotateY(180deg); */
+    transition: 1500ms;
     transform-style: preserve-3d;
     cursor: pointer;
+    margin: 0vh 300px 450px 350px;
     position: relative;
-    
 }
 
-#figure.flipped {
+.card__face {
+    border: thin #343434 solid;
+    
+    margin: 5px;
+    /* padding: 3px; */
+    /* box-shadow: 3px -3px 3px #373737; */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+
+.card__face--back {
     transform: rotateY(180deg);
+    min-height: 400px;
+    min-width: 400px;
+    text-align: center;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    color: white;
+}
+
+
+.card.flipped {
+    transform: rotateY(180deg);
+
 }
 
 figcaption {
@@ -43,4 +71,10 @@ figcaption {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
- 
+#newCardButton {
+    color: white;
+    min-width: 150px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+}
