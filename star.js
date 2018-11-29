@@ -83,7 +83,7 @@ var location = document.getElementById("newCardButton")
 location.appendChild(bon)
 
 bon.addEventListener('click', () => {
-    alert("Sir, it's the Enterprise!")
+    alert("Let's break canon, shall we?")
     cardMaker(feds)
 });
 
